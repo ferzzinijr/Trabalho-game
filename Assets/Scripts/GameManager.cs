@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,14 @@ public class GameManager : MonoBehaviour
     [Header("Coletáveis")]
     public int totalBolas; 
     private int bolasRestantes;
+
+    private bool jogoAcabou = false;
+
+    [Header("UI de Vitória")]
+    public GameObject telaVitoria;
+
+    [Header("UI de Derrota")]
+    public GameObject telaDerrota;
 
     void Awake()
     {
@@ -40,12 +49,15 @@ public class GameManager : MonoBehaviour
 
     public void BolaColetada(int pontos)
     {
+        if (jogoAcabou) return;
+
         AddScore(pontos);
         bolasRestantes--;
 
         if (bolasRestantes <= 0)
         {
-            FimDeJogo();
+            jogoAcabou = true;
+            StartCoroutine(FimDeJogoCoroutine());
         }
     }
 
@@ -55,8 +67,42 @@ public class GameManager : MonoBehaviour
             scoreText.text = "Pontos: " + score.ToString();
     }
 
-    void FimDeJogo()
+    IEnumerator FimDeJogoCoroutine()
     {
+        yield return new WaitForSeconds(3f);
+
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void GameOverPorGasolina()
+    {
+        if (jogoAcabou) return;
+
+        jogoAcabou = true;
+
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+            player.StopPlayer();
+
+        if (telaDerrota != null)
+            telaDerrota.SetActive(true);
+
+        Time.timeScale = 0f;
+    }
+
+    public void PlayerReachedGoal()
+    {
+        if (jogoAcabou) return;
+
+        jogoAcabou = true;
+
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+            player.StopPlayer();
+
+        if (telaVitoria != null)
+            telaVitoria.SetActive(true);
+
+        Time.timeScale = 0f;
     }
 }
