@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 75936442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 523.7, y: 171.8, z: 50.5}
+  m_LocalPosition: {x: 523.4, y: 171.8, z: 50.5}
   m_LocalScale: {x: 97, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "VOC\xCA GANHOU!!!!"
+  m_text: "VOC\xCA GANHOU!!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5770,7 +5770,7 @@ Transform:
   m_GameObject: {fileID: 1488827143}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 296.1, y: 171.8, z: 50.6}
+  m_LocalPosition: {x: 296.9, y: 171.8, z: 50.9}
   m_LocalScale: {x: 98, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7629,7 +7629,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 409.6, y: 171.8, z: 99.7}
-  m_LocalScale: {x: 230, y: 2, z: 1}
+  m_LocalScale: {x: 228, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 417392473}
@@ -7976,7 +7976,6 @@ GameObject:
   - component: {fileID: 1896621211}
   - component: {fileID: 1896621210}
   - component: {fileID: 1896621213}
-  - component: {fileID: 1896621214}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8025,7 +8024,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 100
-  field of view: 60
+  field of view: 72
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -8052,8 +8051,8 @@ Transform:
   m_GameObject: {fileID: 1896621209}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 410.72, y: 265.6, z: 48.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 410.72, y: 267, z: 46.4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8102,18 +8101,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1896621214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896621209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64315c8830ca7814da89a08ee2f03126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
 --- !u!1 &1904394468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8440,7 +8427,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 409.3, y: 171.8, z: 1.3}
-  m_LocalScale: {x: 230, y: 2, z: 1}
+  m_LocalScale: {x: 228, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 417392473}
